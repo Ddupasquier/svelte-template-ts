@@ -1,4 +1,11 @@
-<div class="front-waves">
+<script lang="ts">
+	let scroll: integer;
+</script>
+
+<svelte:window bind:scrollY={scroll} />
+
+<div class="front-waves" style:transform={`translateY(${scroll / 4}px)`}>
+	<h1>Scroll: {scroll}</h1>
 	<svg
 		id="visual"
 		viewBox="0 0 900 600"
@@ -57,19 +64,13 @@
 	#visual {
 		position: absolute;
 		bottom: 250px;
-		// left: 0;
 		z-index: 2;
 	}
-	
+
 	#visual1 {
 		position: absolute;
 		top: 250px;
-		// left: 0;
 		z-index: 2;
-		// overflow-y: auto;
-		// overflow-x: hidden;
-		// perspective: 1px;
-		// transform-style: preserve-3d;
 	}
 
 	.layer5 {

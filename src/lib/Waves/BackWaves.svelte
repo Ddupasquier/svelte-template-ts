@@ -61,12 +61,10 @@
 <style lang="scss">
 	.back-waves {
 		position: absolute;
-		// top: 10rem;
 		left: 0;
 		width: 100%;
 		height: 1300px;
 		overflow: hidden;
-		// border: green solid;
 	}
 
 	.flip {
@@ -76,20 +74,13 @@
 	#visual {
 		position: absolute;
 		top: 0;
-		// left: 0;
 		z-index: -1;
 	}
 
 	#visual1 {
 		position: absolute;
 		top:700px;
-		// left: 0;
 		z-index: -1;
-		// border: red solid;
-		// overflow-y: auto;
-		// overflow-x: hidden;
-		// perspective: 1px;
-		// transform-style: preserve-3d;
 	}
 
 	.layer1 {

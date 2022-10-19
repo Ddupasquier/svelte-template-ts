@@ -1,20 +1,20 @@
 <script lang="ts">
 	import AboveFold from '$lib/AboveFold.svelte';
 	import GlobalStylesProvider from '$lib/GlobalStylesProvider.svelte';
-	import Bottom3 from '$lib/Waves/BottomWave.svelte';
-	import Top3 from '$lib/Waves/TopWave.svelte';
+	import FrontWaves from '$lib/Waves/FrontWaves.svelte';
+	import BackWaves from '$lib/Waves/BackWaves.svelte';
 	import WholeWave from '$lib/WholeWave.svelte';
 </script>
 
 <GlobalStylesProvider>
 	<div class="main-container">
 		<AboveFold />
-		<Top3 />
+		<BackWaves />
 		<!-- <WholeWave /> -->
 		<main>
 			<slot />
 		</main>
-		<Bottom3 />
+		<FrontWaves />
 		<footer>Footer</footer>
 	</div>
 </GlobalStylesProvider>
