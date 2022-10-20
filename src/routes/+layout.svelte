@@ -3,26 +3,28 @@
 	import GlobalStylesProvider from '$lib/GlobalStylesProvider.svelte';
 	import FrontWaves from '$lib/Waves/FrontWaves.svelte';
 	import BackWaves from '$lib/Waves/BackWaves.svelte';
-	import WholeWave from '$lib/WholeWave.svelte';
+	// import WholeWave from '$lib/WholeWave.svelte';
 </script>
 
 <GlobalStylesProvider>
 	<div class="main-container">
 		<AboveFold />
 		<BackWaves />
-		<!-- <WholeWave /> -->
+		<FrontWaves />
 		<main>
 			<slot />
 		</main>
-		<FrontWaves />
 		<footer>Footer</footer>
 	</div>
 </GlobalStylesProvider>
 
 <style lang="scss">
 	.main-container {
-		display: grid;
-		grid-template-rows: 1fr auto;
-		height: 100vh;
+		position: relative;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		justify-content: space-between;
 	}
 </style>
